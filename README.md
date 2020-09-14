@@ -12,9 +12,9 @@ O usuário também poderá editar e apagar postagens à vontade, bem como um qua
 
 A aplicação possuirá três telas:
 
-    * Quadro de avisos principal
-    * Tela para editar/criar posts
-    * Página sobre o projeto, que contém
-    os autores, objetivo, bem como o framework utilizado naquela versão da aplicação.
+1. Quadro de avisos principal
+2. Tela para editar/criar posts
+3. Página sobre o projeto, que contém
+   os autores, objetivo, bem como o framework utilizado naquela versão da aplicação.
 
 Em breve, colocaremos mockups de como a aplicação deve ficar nesse repositório.
