@@ -17,4 +17,20 @@ A aplicação possuirá três telas:
 3. Página sobre o projeto, que contém
    os autores, objetivo, bem como o framework utilizado naquela versão da aplicação.
 
-Em breve, colocaremos mockups de como a aplicação deve ficar nesse repositório.
+## Telas
+
+### Página Inicial
+
+[![Desktop-1.png](https://i.postimg.cc/TYYC8mvW/Desktop-1.png)](https://postimg.cc/Sj3WCnsy)
+
+### Criar / Editar um post
+
+[![Desktop-3.png](https://i.postimg.cc/hPyMKjKZ/Desktop-3.png)](https://postimg.cc/3dG2B342)
+
+### Sobre esse projeto e o que achamos do framework utilizado
+
+[![Desktop-4.png](https://i.postimg.cc/x1X582Cf/Desktop-4.png)](https://postimg.cc/5XMLKDLT)
+
+A cor principal do projeto dependerá do framework que utilizamos para fazê-lo. Os mockups acima representam a aplicação feita em Vue, portanto a cor principal é verde.
+
+Estamos considerando fazer uma página individual para cada post.
