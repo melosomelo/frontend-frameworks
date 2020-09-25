@@ -9,7 +9,7 @@ const firebaseConfig = {
   projectId: "frontend-frameworks",
   storageBucket: "frontend-frameworks.appspot.com",
   messagingSenderId: "300698978033",
-  appId: "1:300698978033:web:4c8050f8e4d88023080b50",
+  appId: "1:300698978033:web:4c8050f8e4d88023080b50"
 };
 
 // initiailizing app
