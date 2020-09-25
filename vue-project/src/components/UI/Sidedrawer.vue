@@ -1,15 +1,13 @@
 <template>
   <div id="sidedrawer-wrapper">
     <img
-      :src="require(`../../assets/images/close-icon.svg`)"
       id="close-sidedrawer-icon"
+      :src="require(`../../assets/images/close-icon.svg`)"
       @click="$emit('close-sidedrawer')"
     />
     <nav>
-      <router-link to="/" @click="$emit('close-sidedrawer')">Home</router-link>
-      <router-link to="/about" @click="$emit('close-sidedrawer')"
-        >About</router-link
-      >
+      <router-link to="/" @click="$emit('close-sidedrawer')"> Home</router-link>
+      <router-link to="/about" @click="$emit('close-sidedrawer')">About</router-link>
       <router-link to="/manage-post" @click="$emit('close-sidedrawer')">
         <button>New Post</button>
       </router-link>
@@ -19,7 +17,7 @@
 
 <script>
 export default {
-  name: "Sidedrawer",
+  name: "Sidedrawer"
 };
 </script>
 

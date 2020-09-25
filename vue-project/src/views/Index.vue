@@ -3,7 +3,12 @@
 </template>
 
 <script>
+import { db } from "../firebase";
+
 export default {
   name: "Index",
+  mounted: () => {
+    console.log("mounted");
+  }
 };
 </script>
