@@ -1,12 +1,27 @@
 <template>
-  <div class="posts-grid">
-    <Post v-for="post in posts" :key="post.id" :data="post" />
+  <Loader v-if="loading" />
+  <div v-else class="posts-grid">
+    <Post
+      v-for="post in posts"
+      :key="post.id"
+      :data="post"
+      :id="post.id"
+      @delete-post="onDeletePost"
+    />
+  </div>
+  <div
+    v-if="!loading && posts.length === 0"
+    style="text-align: center;position: absolute;top:50%;left:50%;transform: translate(-50%,-50%);"
+  >
+    <p style="margin-bottom: 1.5rem;">There are no posts yet.</p>
+    <p><span>Why don't you write one?</span></p>
   </div>
 </template>
 
 <script>
 import { db } from "../firebase";
 import Post from "../components/Post";
+import Loader from "../components/Loader";
 
 export default {
   name: "Index",
@@ -21,12 +36,28 @@ export default {
       });
     });
     this.posts = posts;
+    //setting the loader to false so that the posts can show up and the loader component vanishes
+    this.loading = false;
   },
   data: () => ({
-    posts: []
+    posts: [],
+    loading: true
   }),
+  methods: {
+    async onDeletePost(postId) {
+      //updating the database
+      await db
+        .collection("posts")
+        .doc(postId)
+        .delete();
+      //updating our data so the UI refreshes and removes the post
+      this.posts = this.posts.filter(post => post.id !== postId);
+      console.log("deleted post!");
+    }
+  },
   components: {
-    Post
+    Post,
+    Loader
   }
 };
 </script>
@@ -45,6 +76,7 @@ export default {
   .posts-grid {
     grid-template-columns: repeat(auto-fill, minmax(295px, 1fr));
     column-gap: 15px;
+    row-gap: 15px;
   }
 
   .posts-grid .post-wrapper {

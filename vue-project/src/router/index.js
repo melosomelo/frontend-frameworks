@@ -7,7 +7,7 @@ const routes = [
   {
     path: "/",
     name: "Index",
-    component: Index,
+    component: Index
   },
   {
     path: "/about",
@@ -15,18 +15,29 @@ const routes = [
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: About,
+    component: About
   },
   {
     path: "/create-post",
     name: "Create Post",
     component: ManagePost,
+    props: {
+      createPostMode: true
+    }
   },
+  {
+    path: "/edit-post/:id",
+    name: "Edit Post",
+    component: ManagePost,
+    props: {
+      createPostMode: false
+    }
+  }
 ];
 
 const router = createRouter({
   history: createWebHashHistory(),
-  routes,
+  routes
 });
 
 export default router;

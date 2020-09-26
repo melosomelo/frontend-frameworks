@@ -5,7 +5,7 @@
     </router-link>
     <nav>
       <router-link to="/about">About</router-link>
-      <router-link to="/manage-post"><button>New Post</button></router-link>
+      <router-link to="/create-post"><button>New Post</button></router-link>
     </nav>
   </header>
 </template>
@@ -63,6 +63,6 @@ a:hover {
 <script>
 export default {
   name: "Header",
-  props: ["currentRoute"],
+  props: ["currentRoute"]
 };
 </script>

@@ -3,8 +3,14 @@
     <div class="top-wrapper">
       <h2>{{ data.title }}</h2>
       <div class="icons-wrapper">
-        <img :src="require(`../assets/images/edit-icon.svg`)" class="edit-post-icon" />
-        <img :src="require(`../assets/images/close-icon-squared.svg`)" class="delete-post-icon" />
+        <router-link :to="'/edit-post/' + id">
+          <img :src="require(`../assets/images/edit-icon.svg`)" class="edit-post-icon" />
+        </router-link>
+        <img
+          :src="require(`../assets/images/close-icon-squared.svg`)"
+          class="delete-post-icon"
+          @click="$emit('delete-post', id)"
+        />
       </div>
     </div>
 
@@ -18,7 +24,7 @@ import monthsMapping from "../utils/monthsMapping";
 
 export default {
   name: "Post",
-  props: ["data"],
+  props: ["data", "id"],
   computed: {
     dateString() {
       //initializing a date object

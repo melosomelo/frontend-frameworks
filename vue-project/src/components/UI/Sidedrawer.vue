@@ -8,7 +8,7 @@
     <nav>
       <router-link to="/" @click="$emit('close-sidedrawer')"> Home</router-link>
       <router-link to="/about" @click="$emit('close-sidedrawer')">About</router-link>
-      <router-link to="/manage-post" @click="$emit('close-sidedrawer')">
+      <router-link to="/create-post" @click="$emit('close-sidedrawer')">
         <button>New Post</button>
       </router-link>
     </nav>
