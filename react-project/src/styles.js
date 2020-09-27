@@ -70,6 +70,48 @@ const GlobalStyle = createGlobalStyle`
     color: #4fc08d;
   }
 
+  input {
+    border: none;
+    border-bottom: 2px solid #b7b7b7;
+
+    background-color: transparent;
+
+    font-size: 2.5rem;
+    
+    padding: 1rem;
+  }
+
+  textarea{
+    resize: none;
+
+    border: 2px solid #b7b7b7;
+    border-radius: 10px;
+
+    font-size: 2rem;
+
+    padding: 1.5rem;
+
+    background-color: transparent;
+
+    min-height: 400px;
+  }
+
+  input:focus{
+    border-bottom: 2px solid #61dafb;
+  }
+
+  textarea:focus{
+    border: 2px solid #61dafb;
+
+  }
+
+  textarea:focus,
+  input:focus{
+    outline: none;
+    transition: border 300ms ease-in;
+  }
+
+
 
 `;
 
