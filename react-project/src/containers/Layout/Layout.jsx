@@ -1,12 +1,27 @@
 import React, { useRef } from "react";
+import { useLocation } from "react-router-dom";
 
 import Header from "../../components/UI/Header/Header";
 import Sidedrawer from "../../components/UI/Sidedrawer/Sidedrawer";
 
 import { MenuIcon } from "./styles";
 
-function Layout() {
+function Layout({ children }) {
   const sidedrawerRef = useRef(null);
+  const location = useLocation();
+
+  const getPageTitle = (pathname) => {
+    switch (pathname) {
+      case "/":
+        return "All posts";
+      case "/about":
+        return "About";
+      case "/create-post":
+        return "Create a post";
+      default:
+        return "Edit a post";
+    }
+  };
 
   const onMenuIconClick = () => {
     // showing the sidedrawer
@@ -23,15 +38,17 @@ function Layout() {
       <h1
         style={{
           textAlign: "center",
+          marginBottom: "2rem",
         }}
       >
-        Page title
+        {getPageTitle(location.pathname)}
       </h1>
       <MenuIcon onClick={onMenuIconClick} />
       <Sidedrawer
         sidedrawerRef={sidedrawerRef}
         closeSidedrawer={closeSidedrawer}
       />
+      {children}
     </>
   );
 }

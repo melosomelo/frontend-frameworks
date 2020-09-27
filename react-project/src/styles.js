@@ -58,6 +58,18 @@ const GlobalStyle = createGlobalStyle`
     font-weight: 300;
   }
 
+  p {
+    font-size: 2rem;
+  }
+
+  span {
+    color: #61dafb;
+  }
+
+  span.vue {
+    color: #4fc08d;
+  }
+
 
 `;
 

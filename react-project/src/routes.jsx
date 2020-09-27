@@ -1,12 +1,17 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
 
-import Index from "./views/Index/Index";
+// eslint-disable-next-line import/extensions
+import Index from "./views/Index/Index.jsx";
+import About from "./views/About/About";
 
 function Routes() {
   return (
     <Switch>
-      <Route to="/" exact>
+      <Route path="/about">
+        <About />
+      </Route>
+      <Route path="/">
         <Index />
       </Route>
     </Switch>

@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 export const Wrapper = styled.header`
   margin-top: 8rem;
+  /* this is a gambiarra */
   & * {
     display: none;
   }
