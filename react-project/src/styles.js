@@ -22,7 +22,37 @@ const GlobalStyle = createGlobalStyle`
   body{
     background-color: #f5f5f5;
     font-family: "Nunito";
+    color: #1b1c1e;
   }
+
+  button {
+    border: none;
+
+    font-size: 2rem;
+    font-weight: 600;
+    color: white;
+
+    padding: 1.5rem 3.5rem;
+
+    border-radius: 10px;
+
+    background-color: #61dafb;
+
+    cursor: pointer;
+
+  }
+
+  a {
+    font-size: 2rem;
+    color: #1b1c1e;
+
+    text-decoration: none;
+  }
+
+  a:hover{
+    color: #61dafb;
+  }
+
 
 `;
 

@@ -1,12 +1,16 @@
 import React from "react";
 
+import Layout from "./containers/Layout/Layout";
+
 import Routes from "./routes";
 
 function App() {
   return (
-    <div className="App">
-      <Routes />
-    </div>
+    <Layout>
+      <div className="App">
+        <Routes />
+      </div>
+    </Layout>
   );
 }
 
