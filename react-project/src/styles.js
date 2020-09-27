@@ -53,6 +53,11 @@ const GlobalStyle = createGlobalStyle`
     color: #61dafb;
   }
 
+  h1{
+    font-size: 4.8rem;
+    font-weight: 300;
+  }
+
 
 `;
 

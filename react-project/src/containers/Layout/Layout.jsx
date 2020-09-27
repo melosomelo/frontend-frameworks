@@ -16,14 +16,22 @@ function Layout() {
   const closeSidedrawer = () => {
     sidedrawerRef.current.classList.remove("show");
   };
+
   return (
     <>
+      <Header />
+      <h1
+        style={{
+          textAlign: "center",
+        }}
+      >
+        Page title
+      </h1>
       <MenuIcon onClick={onMenuIconClick} />
       <Sidedrawer
         sidedrawerRef={sidedrawerRef}
         closeSidedrawer={closeSidedrawer}
       />
-      <Header />
     </>
   );
 }
