@@ -35,6 +35,7 @@ function Index() {
     <Wrapper>
       {posts.map((post) => (
         <Post
+          id={post.id}
           key={post.id}
           title={post.title}
           text={post.text}

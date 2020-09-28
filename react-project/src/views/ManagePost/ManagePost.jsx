@@ -6,7 +6,7 @@ import { Wrapper } from "./styles";
   As we did with the Vue project, we're going to reuse a component for both the
   Add & Edit post view,
   since it's pretty much the same component but with filled input & textarea values */
-function ManagePost() {
+function ManagePost({ isInCreateMode }) {
   return (
     <Wrapper>
       <input type="text" />

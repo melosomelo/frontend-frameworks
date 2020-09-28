@@ -1,11 +1,13 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import monthsMapping from "../../util/monthsMapping";
 
 // eslint-disable-next-line object-curly-newline
 import { Wrapper, CloseIcon, EditIcon, TopWrapper } from "./styles";
 
-function Post({ title, text, date }) {
+// eslint-disable-next-line object-curly-newline
+function Post({ title, text, date, id }) {
   return (
     <Wrapper>
       <TopWrapper>
@@ -22,7 +24,9 @@ function Post({ title, text, date }) {
               marginRight: "8px",
             }}
           />
-          <EditIcon />
+          <Link to={`/edit-post/${id}`}>
+            <EditIcon />
+          </Link>
         </div>
       </TopWrapper>
       <p>{text}</p>

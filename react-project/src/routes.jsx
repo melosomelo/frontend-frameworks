@@ -12,8 +12,11 @@ function Routes() {
       <Route path="/about">
         <About />
       </Route>
-      <Route path="/create-post">
+      <Route path="/create-post" exact>
         <ManagePost isInCreateMode />
+      </Route>
+      <Route path="/edit-post/:id" exact>
+        <ManagePost isInCreateMode={false} />
       </Route>
       <Route path="/">
         <Index />
