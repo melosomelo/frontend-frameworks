@@ -39,3 +39,20 @@ a:focus,
 a:hover {
   color: #ff3e00;
 }
+
+p {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+span {
+  color: #ff3e00;
+}
+
+span.react {
+  color: #61dafb;
+}
+
+span.vue {
+  color: #4fc08d;
+}
