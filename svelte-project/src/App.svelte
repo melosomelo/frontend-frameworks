@@ -3,14 +3,16 @@
   import Home from "./views/Home.svelte";
   import About from "./views/About.svelte";
 
+  import Layout from "./components/Layout.svelte";
+
   export let url = "";
 </script>
 
 <Router {url}>
-  <div>
+  <Layout>
     <Route path="about" component={About} />
     <Route path="/">
       <Home />
     </Route>
-  </div>
+  </Layout>
 </Router>
