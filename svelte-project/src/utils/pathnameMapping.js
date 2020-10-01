@@ -8,6 +8,8 @@ function pathnameMapping(pathname) {
       return "About";
     case "/create-post":
       return "Create a post";
+    default:
+      return "Edit a post";
   }
 }
 

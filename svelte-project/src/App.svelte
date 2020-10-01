@@ -2,6 +2,7 @@
   import { Router, Link, Route } from "svelte-routing";
   import Home from "./views/Home.svelte";
   import About from "./views/About.svelte";
+  import ManagePost from "./views/ManagePost.svelte";
 
   import pathnameMapping from "./utils/pathnameMapping";
 
@@ -23,7 +24,13 @@
 
 <Router {url}>
   <Layout {currentPageName} on:viewChange={changePageTitle}>
+    <Route path="/create-post">
+      <ManagePost isInCreateMode={true} />
+    </Route>
     <Route path="about" component={About} />
+    <Route path="/edit-post/:id">
+      <ManagePost isInCreateMode={false} />
+    </Route>
     <Route path="/">
       <Home on:viewChange={changePageTitle} />
     </Route>

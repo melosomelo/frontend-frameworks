@@ -56,3 +56,39 @@ span.react {
 span.vue {
   color: #4fc08d;
 }
+
+input,
+textarea {
+  background-color: transparent;
+  border: none;
+}
+
+input {
+  padding: 1.5rem;
+  border-bottom: 2px solid rgba(183, 183, 183, 0.6);
+  font-size: 2.5rem;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  transition: all 300ms ease-in;
+}
+
+textarea:focus {
+  border: 2px solid #ff3e00;
+}
+
+input:focus {
+  border-bottom: 2px solid #ff3e00;
+}
+
+textarea {
+  resize: none;
+  font-size: 2.5rem;
+
+  padding: 2rem;
+
+  border-radius: 10px;
+  border: 2px solid rgba(183, 183, 183, 0.6);
+}
