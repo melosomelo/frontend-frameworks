@@ -3,17 +3,10 @@
   import Header from "./Header.svelte";
   import pathnameMapping from "../utils/pathnameMapping";
 
-  let openSidedrawer = false;
-  let currentPageName = pathnameMapping(window.location.pathname);
+  //
+  export let currentPageName;
 
-  //event listener that will handle every click on every link
-  //so that we can update the page title accordingly
-  //the parameter event.detail.newPageTitle is passed as an argument automatically by
-  //svelte when we use the dispatch function inside the components
-  function changePageTitle(event) {
-    const newPageTitle = event.detail.newPageTitle;
-    currentPageName = newPageTitle;
-  }
+  let openSidedrawer = false;
 
   function closeSidedrawer() {
     openSidedrawer = false;
@@ -57,7 +50,7 @@
 <Sidedrawer
   on:closeSidedrawer={closeSidedrawer}
   {openSidedrawer}
-  on:viewChange={changePageTitle} />
-<Header on:viewChange={changePageTitle} />
+  on:viewChange />
+<Header on:viewChange />
 <h1>{currentPageName}</h1>
 <slot />
