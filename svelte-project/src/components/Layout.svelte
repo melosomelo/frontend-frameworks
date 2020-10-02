@@ -28,6 +28,7 @@
     text-align: center;
 
     margin-top: 6rem;
+    margin-bottom: 3rem;
   }
 
   @media (min-width: 992px) {

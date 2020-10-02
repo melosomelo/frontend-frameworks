@@ -83,6 +83,14 @@ input:focus {
   border-bottom: 2px solid #ff3e00;
 }
 
+input.invalid-input {
+  border-bottom: 2px solid #e51d1d;
+}
+
+textarea.invalid-input {
+  border: 2px solid #e51d1d;
+}
+
 textarea {
   resize: none;
   font-size: 2.5rem;
