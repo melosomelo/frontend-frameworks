@@ -2,6 +2,7 @@
   //imports
   import { Link } from "svelte-routing";
   import { createEventDispatcher } from "svelte";
+  import { db } from "../firebase";
   //props
   export let title;
   export let text;
@@ -24,6 +25,18 @@
   ];
   //creating dispatcher to listen to link click events
   const dispatch = createEventDispatcher();
+
+  //event listeners
+
+  async function onPostDelete() {
+    //deleting the post in the databaes
+    await db.collection("posts").doc(id).delete();
+    //deleting the html element locally
+    wrapperRef.remove();
+  }
+
+  //variables
+  let wrapperRef;
 </script>
 
 <style>
@@ -74,7 +87,7 @@
   }
 </style>
 
-<article class="post-wrapper">
+<article class="post-wrapper" bind:this={wrapperRef}>
   <div class="top-wrapper">
     <h2>{title}</h2>
     <div class="icons-wrapper">
@@ -87,7 +100,10 @@
           alt="edit icon"
           class="edit-post-icon" />
       </Link>
-      <img src="/images/close-icon.svg" alt="close icon" />
+      <img
+        src="/images/close-icon.svg"
+        alt="close icon"
+        on:click={onPostDelete} />
     </div>
   </div>
   <p>{text}</p>
