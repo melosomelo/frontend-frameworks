@@ -37,30 +37,27 @@
   <article class="dev-opinion">
     <h2>@melosomelo</h2>
     <p>
-      Overall, I didn't like
-      <span>Svelte</span>. It seems to me like it's an oversimplified version of
-      <span class="vue">Vue</span>. And also one that isn't as easy and as
-      complete as the former. Even thought
-      <span class="vue">.vue</span>
-      files are really similar to
-      <span>.svelte</span>
-      ones, I'd say that
-      <span>.svelte</span>
-      are "looser".
-      <span class="vue">Vue</span>
-      has a better organized structure.
+      I have mixed feelings about
+      <span>Svelte</span>. When I first started using it for this project, I
+      didn't like it. I think it feels like a simplified version of
+      <span class="vue">Vue</span>. I'm not sure if I like or dislike that. I
+      preffer the "structure" that comes with
+      <span class="vue">Vue</span>. But I totally get why some people might like
+      coding with
+      <span>Svelte</span>
+      due to the simplicity of doing so.
     </p>
     <p>
-      I didn't like the syntax of "if blocks", I didn't like that the community
-      isn't as big as the other frameworks and I didn't like the documentation.
-      So far, is at the bottom of my list.
+      One thing that seems really nice about it is that its bundle looks really
+      small and efficient, since it's compiled to regular Javascript. That seems
+      like a really, realy cool feature.
     </p>
-    <p>I think that the fact that is compiled is interesting, though.</p>
     <p>
+      So far,
       <span class="vue">Vue</span>
       &gt=
       <span class="react">React</span>
-      &gt&gt&gt
+      &gt
       <span>Svelte</span>.
     </p>
   </article>
