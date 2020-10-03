@@ -47,13 +47,13 @@ function ManagePost({ isInCreateMode }) {
       return;
     }
 
-    inputRef.current.classList.add("invalid-input");
-    textareaRef.current.classList.add("invalid-input");
+    inputRef.current.classList.remove("invalid-input");
+    textareaRef.current.classList.remove("invalid-input");
     // if we're in create mode, then we need to write new data in the database
     if (isInCreateMode) {
       await db.collection("posts").add({
-        title: postData.titleValue,
-        text: postData.textValue,
+        title: inputRef.current.value,
+        text: textareaRef.current.value,
         time: new Date(),
       });
     } else {
