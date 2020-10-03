@@ -11,7 +11,7 @@ import { Wrapper } from "./styles";
   Add & Edit post view,
   since it's pretty much the same component but with filled input & textarea values */
 function ManagePost({ isInCreateMode }) {
-  const [loading, setLoading] = useState();
+  const [loading, setLoading] = useState(true);
   const [postData, setPostData] = useState({
     titleValue: "",
     textValue: "",
