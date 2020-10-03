@@ -7,9 +7,9 @@ import monthsMapping from "../../util/monthsMapping";
 import { Wrapper, CloseIcon, EditIcon, TopWrapper } from "./styles";
 
 // eslint-disable-next-line object-curly-newline
-function Post({ title, text, date, id }) {
+function Post({ title, text, date, id, onDeletePost }) {
   return (
-    <Wrapper>
+    <Wrapper data-id={id}>
       <TopWrapper>
         <h2>{title}</h2>
         <div
@@ -19,6 +19,7 @@ function Post({ title, text, date, id }) {
           }}
         >
           <CloseIcon
+            onClick={() => onDeletePost(id)}
             style={{
               width: "30px",
               marginRight: "8px",

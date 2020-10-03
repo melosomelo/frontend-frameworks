@@ -27,6 +27,14 @@ function Index() {
     })();
   }, []);
 
+  const onDeletePost = async (postID) => {
+    console.log("deleting...");
+    // updating database
+    await db.collection("posts").doc(postID).delete();
+    // updating our local posts
+    setPosts((prevState) => prevState.filter((post) => post.id !== postID));
+  };
+
   if (loading) {
     return <Loader />;
   }
@@ -35,6 +43,7 @@ function Index() {
     <Wrapper>
       {posts.map((post) => (
         <Post
+          onDeletePost={onDeletePost}
           id={post.id}
           key={post.id}
           title={post.title}
