@@ -81,6 +81,11 @@ const GlobalStyle = createGlobalStyle`
     padding: 1rem;
   }
 
+  input.invalid-input, 
+  textarea.invalid-input {
+    border-color: #e51d1d;
+  }
+
   textarea{
     resize: none;
 
