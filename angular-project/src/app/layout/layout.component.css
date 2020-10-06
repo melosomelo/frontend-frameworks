@@ -1,0 +1,25 @@
+#sidedrawer-toggler {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+}
+
+h1 {
+  margin-top: 8rem;
+  margin-bottom: 3rem;
+
+  font-size: 4.8rem;
+  font-weight: 300;
+
+  text-align: center;
+}
+
+@media (min-width: 992px) {
+  #sidedrawer-toggler {
+    display: none;
+  }
+
+  h1 {
+    margin-top: 0;
+  }
+}

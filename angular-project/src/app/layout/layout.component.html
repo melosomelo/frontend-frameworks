@@ -1,0 +1,11 @@
+<img
+  src="/assets/images/menu-icon.svg"
+  id="sidedrawer-toggler"
+  (click)="onOpenSidedrawer()"
+/>
+<app-sidedrawer
+  [showSidedrawer]="showSidedrawer"
+  (closeSidedrawer)="receiveFeedback($event)"
+></app-sidedrawer>
+<app-header></app-header>
+<h1>{{ pageTitle }}</h1>
