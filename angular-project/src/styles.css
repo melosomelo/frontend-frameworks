@@ -25,10 +25,6 @@ a:focus {
   text-decoration: none;
 }
 
-a:hover {
-  color: #dd0031;
-}
-
 button {
   border: none;
   border-radius: 10px;
@@ -36,10 +32,13 @@ button {
   background-color: #dd0031;
 
   padding: 1.5rem 4rem;
+
+  color: white;
+  font-size: 2rem;
+  font-weight: 700;
 }
 
-button a,
-button a:hover {
+button a {
   color: white;
   font-weight: 700;
 }
