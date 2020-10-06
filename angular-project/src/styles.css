@@ -25,6 +25,27 @@ a:focus {
   text-decoration: none;
 }
 
+p {
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+span {
+  color: #dd0031;
+}
+
+span.react {
+  color: #61dafb;
+}
+
+span.vue {
+  color: #4fc08d;
+}
+
+span.svelte {
+  color: #ff3e00;
+}
+
 button {
   border: none;
   border-radius: 10px;
