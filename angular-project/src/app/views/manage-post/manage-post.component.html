@@ -1,0 +1,15 @@
+<form>
+  <input
+    placeholder="Your post's title"
+    [(ngModel)]="postData.title"
+    name="Title"
+    [ngClass]="{ 'invalid-input': invalidInput }"
+  />
+  <textarea
+    placeholder="Your message goes here"
+    [(ngModel)]="postData.text"
+    name="Text"
+    [ngClass]="{ 'invalid-input': invalidInput }"
+  ></textarea>
+  <button (click)="onButtonClick($event)">Save</button>
+</form>
