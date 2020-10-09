@@ -1,1 +1,8 @@
-<p>home works!</p>
+<div class="posts-grid">
+  <app-post
+    *ngFor="let post of posts"
+    [title]="post.title"
+    [text]="post.text"
+    [time]="post.time"
+  ></app-post>
+</div>
