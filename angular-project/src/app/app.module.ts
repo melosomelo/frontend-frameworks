@@ -11,6 +11,7 @@ import { AboutComponent } from './views/about/about.component';
 import { SidedrawerComponent } from './components/sidedrawer/sidedrawer.component';
 import { ManagePostComponent } from './views/manage-post/manage-post.component';
 import { PostComponent } from './components/post/post.component';
+import { LoaderComponent } from './components/loader/loader.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { PostComponent } from './components/post/post.component';
     SidedrawerComponent,
     ManagePostComponent,
     PostComponent,
+    LoaderComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],

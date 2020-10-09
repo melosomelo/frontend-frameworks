@@ -8,6 +8,7 @@ import { db } from '../../../firebase';
 })
 export class HomeComponent implements OnInit {
   posts = [];
+  loading = true;
   constructor() {}
 
   async ngOnInit(): Promise<void> {
@@ -19,5 +20,6 @@ export class HomeComponent implements OnInit {
         id: doc.id,
       });
     });
+    this.loading = false;
   }
 }

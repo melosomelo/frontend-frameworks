@@ -1,4 +1,5 @@
-<div class="posts-grid">
+<app-loader *ngIf="loading"></app-loader>
+<div #elseBlock class="posts-grid">
   <app-post
     *ngFor="let post of posts"
     [title]="post.title"
