@@ -19,10 +19,11 @@ export class ManagePostComponent implements OnInit, OnDestroy {
   invalidInput = false;
   constructor(private route: ActivatedRoute, private router: Router) {}
 
-  ngOnInit(): void {
-    this.sub = this.route.data.subscribe((v) =>
-      console.log((this.isInCreateMode = v.isInCreateMode))
-    );
+  async ngOnInit() {
+    this.sub = this.route.data.subscribe((v) => {
+      console.log((this.isInCreateMode = v.isInCreateMode));
+      console.log(v);
+    });
   }
 
   async onButtonClick(event: Event): Promise<void> {

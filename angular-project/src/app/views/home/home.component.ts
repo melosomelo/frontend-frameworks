@@ -10,7 +10,6 @@ export class HomeComponent implements OnInit {
   posts = [];
   loading = true;
   constructor() {}
-
   async ngOnInit(): Promise<void> {
     const querySnapshot = await db.collection('posts').get();
     querySnapshot.forEach((doc) => {
@@ -21,5 +20,18 @@ export class HomeComponent implements OnInit {
       });
     });
     this.loading = false;
+  }
+
+  async deletePost(id, posts: any[]) {
+    //delete in firebase
+    try {
+      await db.collection('posts').doc(id).delete();
+    } catch (err) {
+      console.log(err);
+      return;
+    }
+    //delete locally
+    const targetIndex = posts.findIndex((post) => post.id === id);
+    posts.splice(targetIndex, targetIndex + 1);
   }
 }

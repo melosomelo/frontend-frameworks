@@ -9,6 +9,9 @@ export class PostComponent implements OnInit {
   @Input() title: string;
   @Input() text: string;
   @Input() time: Date;
+  @Input() id: string;
+  @Input() deletePost;
+  @Input() posts;
   constructor() {}
 
   ngOnInit(): void {}

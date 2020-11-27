@@ -2,8 +2,14 @@
   <div class="top-wrapper">
     <h2>{{ title }}</h2>
     <div class="icons-wrapper">
-      <img src="/assets/images/close-icon.svg" class="close-icon" />
-      <img src="/assets/images/edit-icon.svg" />
+      <img
+        src="/assets/images/close-icon.svg"
+        class="close-icon"
+        (click)="deletePost(id, posts)"
+      />
+      <a routerLink="/edit-post/{{ id }}">
+        <img src="/assets/images/edit-icon.svg" />
+      </a>
     </div>
   </div>
   <p>
